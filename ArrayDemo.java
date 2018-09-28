@@ -96,6 +96,7 @@ public class ArrayDemo{
 //code to count the 0s
 
 
+
   public static void main(String[] args){
     System.out.println(stringintarray1d(0)) ;
     System.out.println(stringintarray1d(1)) ;
