@@ -95,7 +95,42 @@ public class ArrayDemo{
     }
 //code to count the 0s
 
+/* 2a. Modify a given 2D array of integer as follows:
+Replace all the of values with 1's
+EXCEPT when the row number is the same as the column number:
+you must fill those with 3's instead. */
 
+public static int[][] int1array2d(int n, int m){
+  int[][] ary=new int[n][m];
+  for (int i=0;i<ary.length;i++)
+  {
+    for (int j=0;j<ary[i].length;j++)
+    {
+      ary[i][j]=1;
+    }
+  }
+  return ary;
+}
+//code for 2d array of all 1s
+
+public static int[][] fill2D(int n, int m){
+  int[][] ary=new int[n][m];
+  for (int i=0;i<ary.length;i++)
+  {
+    for (int j=0;j<ary[i].length;j++)
+    {
+      if (i==j)
+      {
+        ary[i][j]=3;
+      }
+      else
+      {
+        ary[i][j]=1;
+      }
+    }
+  }
+  return ary;
+}
 
   public static void main(String[] args){
     System.out.println(stringintarray1d(0)) ;
@@ -124,6 +159,13 @@ public class ArrayDemo{
     System.out.println(countZeros2D(2,9)) ; //18
     System.out.println(countZeros2D(8,7)) ; //56
     //tests to count 0s for 2 dimensional arrays of 0s
+
+    System.out.println(fill2D(4,5)) ;
+    System.out.println(fill2D(5,6)) ;
+    System.out.println(fill2D(8,6)) ;
+    System.out.println(fill2D(9,9)) ;
+    System.out.println(fill2D(3,2)) ;
+    //2 dimensional array of 1s, but if row#=column#, return 3
   }
 
 }
