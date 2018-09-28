@@ -1,6 +1,30 @@
 public class ArrayDemo{
 //0a. Make a function to print a 1D array of ints.
 //1 dimensional array of integers
+    public static String make2dstring(int n, int m){
+      int[][] ary=new int[n][m];
+      String stringarray="{";
+      for (int p=0;p<ary.length;p++)
+      {
+        stringarray+= "\n{";
+        for (int q=0;q<ary[p].length;q++)
+        {
+          stringarray+= (ary[p][q]+"");
+          if(q<ary[p].length-1)
+          {
+            stringarray+= ", ";
+          }
+        }
+        stringarray+= "}";
+      }
+      stringarray+= "\n}";
+      if (ary.length==0)
+      {
+        return "{}";
+      } //if array has length 0
+      return stringarray;
+    }
+    //code to turn 2d rectangular array into string
     public static String stringintarray1d(int n){
       String stringarray="{";
       int[] ary=new int[n];
@@ -32,7 +56,6 @@ public class ArrayDemo{
 //0b. Make a function to print a 2d array of ints.
 //2 dimensional array of integers
     public static String stringintarray2d(int n, int m){
-      String stringarray="{";
       int[][] ary=new int[n][m];
       for (int i=0;i<ary.length;i++)
       {
@@ -42,6 +65,7 @@ public class ArrayDemo{
         }
       }
   //made the array of integers
+      String stringarray="{";
       for (int p=0;p<ary.length;p++)
       {
         stringarray+= "\n{";
@@ -113,8 +137,9 @@ public static int[][] int1array2d(int n, int m){
 }
 //code for 2d array of all 1s
 
-public static int[][] fill2D(int n, int m){
+public static String fill2D(int n, int m){
   int[][] ary=new int[n][m];
+  String stringarray="{\n}";
   for (int i=0;i<ary.length;i++)
   {
     for (int j=0;j<ary[i].length;j++)
@@ -129,8 +154,28 @@ public static int[][] fill2D(int n, int m){
       }
     }
   }
-  return ary;
+  //made array
+  for (int p=0;p<ary.length;p++)
+  {
+    stringarray+= "\n{";
+    for (int q=0;q<ary[p].length;q++)
+    {
+      stringarray+= (ary[p][q]+"");
+      if(q<ary[p].length-1)
+      {
+        stringarray+= ", ";
+      }
+    }
+    stringarray+= "}";
+  }
+  stringarray+= "\n}";
+  if (ary.length==0)
+  {
+    return "{}";
+  } //if array has length 0
+  return stringarray;
 }
+
 
   public static void main(String[] args){
     System.out.println(stringintarray1d(0)) ;
