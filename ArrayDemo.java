@@ -1,7 +1,7 @@
 public class ArrayDemo{
 //0a. Make a function to print a 1D array of ints.
 //1 dimensional array of integers
-    public static String stringintarray1d (int n){
+    public static String stringintarray1d(int n){
       String stringarray="{";
       int[] ary=new int[n];
       for (int i=0;i<ary.length;i++)
@@ -31,7 +31,7 @@ public class ArrayDemo{
 
 //0b. Make a function to print a 2d array of ints.
 //2 dimensional array of integers
-    public static String stringintarray2d (int n, int m){
+    public static String stringintarray2d(int n, int m){
       String stringarray="{";
       int[][] ary=new int[n][m];
       for (int i=0;i<ary.length;i++)
@@ -65,8 +65,35 @@ public class ArrayDemo{
 //finish 2 dimensional array
 
 //1. Calculate and return how many zeros are in the parameter
-
-
+//(a rectangular 2D array of integers)
+    public static int[][] int0array2d(int n, int m){
+      int[][] ary=new int[n][m];
+      for (int i=0;i<ary.length;i++)
+      {
+        for (int j=0;j<ary[i].length;j++)
+        {
+          ary[i][j]=0;
+        }
+      }
+      return ary;
+    }
+//code for 2 dimensional array of numbers with many 0s
+    public static int countZeros2D(int n, int m){
+      int count=0;
+      int[][] nums=(int0array2d(n,m));
+      for (int i=0;i<nums.length;i++)
+      {
+        for (int j=0;j<nums[i].length;j++)
+        {
+          if (nums[i][j]==0)
+          {
+            count++;
+          }
+        }
+      }
+      return count;
+    }
+//code to count the 0s
 
 
   public static void main(String[] args){
@@ -83,10 +110,19 @@ public class ArrayDemo{
     System.out.println(stringintarray2d(1,1)+"\n") ;
     System.out.println(stringintarray2d(2,2)+"\n") ;
     System.out.println(stringintarray2d(3,3)+"\n") ;
-    System.out.println(stringintarray2d(4,4)+"\n") ;
+    System.out.println(stringintarray2d(4,5)+"\n") ;
+    System.out.println(stringintarray2d(4,6)+"\n") ;
+    System.out.println(stringintarray2d(7,3)+"\n") ;
+    System.out.println(stringintarray2d(8,2)+"\n") ;
     //System.out.println(stringintarray2d(100,100)) ;
     //tests for 2 dimensional arrays
+
+    System.out.println(countZeros2D(4,5)) ; //20
+    System.out.println(countZeros2D(5,5)) ; //25
+    System.out.println(countZeros2D(6,7)) ; //42
+    System.out.println(countZeros2D(2,9)) ; //18
+    System.out.println(countZeros2D(8,7)) ; //56
+    //tests to count 0s for 2 dimensional arrays of 0s
   }
 
 }
-//0b. Make a function to print a 2d array of ints.
