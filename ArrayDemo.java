@@ -84,7 +84,7 @@ public class ArrayDemo{
     System.out.println(stringintarray2d(2,2)+"\n") ;
     System.out.println(stringintarray2d(3,3)+"\n") ;
     System.out.println(stringintarray2d(4,4)+"\n") ;
-    System.out.println(stringintarray2d(100,100)) ;
+    //System.out.println(stringintarray2d(100,100)) ;
     //tests for 2 dimensional arrays
   }
 
