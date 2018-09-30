@@ -223,12 +223,12 @@ public static int[][] fill2D(int[][] ary){
       {1234,73645,325432},
       {23123444,46745,123431,5678},
     };
-    print2darray(fill2D(samplearrayofanything));
+    printarray(fill2D(samplearrayofanything));
     //expect every number per array to be 1, but every last number to be a 3
-    print2darray(fill2D(arrayofzeroes(5,5))) ;
-    print2darray(fill2D(arrayofzeroes(6,8))) ;
-    print2darray(fill2D(arrayofzeroes(7,5))) ;
-    print2darray(fill2D(arrayofzeroes(10,10))) ;
+    printarray(fill2D(arrayofzeroes(5,5))) ;
+    printarray(fill2D(arrayofzeroes(6,8))) ;
+    printarray(fill2D(arrayofzeroes(7,5))) ;
+    printarray(fill2D(arrayofzeroes(10,10))) ;
     //2 dimensional array of 1s, but if row#=column#, return 3
 
   }
