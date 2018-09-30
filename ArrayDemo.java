@@ -55,9 +55,8 @@ public class ArrayDemo{
       return ary;
     }
 //code for 2 dimensional array of numbers with many 0s
-    public static int countZeros2D(int n, int m){
+    public static int countZeros2D(int[][] nums){
       int count=0;
-      int[][] nums=(int0array2d(n,m));
       for (int i=0;i<nums.length;i++)
       {
         for (int j=0;j<nums[i].length;j++)
@@ -77,7 +76,7 @@ Replace all the of values with 1's
 EXCEPT when the row number is the same as the column number:
 you must fill those with 3's instead. */
 
-public static int[][] fill2D(int[][] ary){
+public static void fill2D(int[][] ary){
   for (int i=0;i<ary.length;i++)
   {
     for (int j=0;j<ary[i].length;j++)
@@ -92,7 +91,6 @@ public static int[][] fill2D(int[][] ary){
       }
     }
   }
-  return ary;
 }
 
   /* made array of all 1s, unless column number is equal to row number, then
@@ -102,7 +100,6 @@ public static int[][] fill2D(int[][] ary){
    Fill that array with with 1's,
    except where the value of the original array is negative:
    you must fill those with 3's instead. */
-
 
    public static int[][] fill2Dcopy(int[][] ary){
      for (int i=0;i<ary.length;i++)
@@ -135,11 +132,11 @@ public static void main(String[] args){
     };
     printarray(ary2d);
 
-    System.out.println(countZeros2D(4,5)) ; //20
-    System.out.println(countZeros2D(5,5)) ; //25
-    System.out.println(countZeros2D(6,7)) ; //42
-    System.out.println(countZeros2D(2,9)) ; //18
-    System.out.println(countZeros2D(8,7)) ; //56
+    System.out.println(countZeros2D(int0array2d(4,5))) ; //20
+    System.out.println(countZeros2D(int0array2d(5,5))) ; //25
+    System.out.println(countZeros2D(int0array2d(6,7))) ; //42
+    System.out.println(countZeros2D(int0array2d(2,9))) ; //18
+    System.out.println(countZeros2D(int0array2d(8,7))) ; //56
     //tests to count 0s for 2 dimensional arrays of 0s
 
     int[][] samplearrayofanything={
@@ -148,12 +145,9 @@ public static void main(String[] args){
       {1234,73645,325432},
       {23123444,46745,123431,5678},
     };
-    printarray(fill2D(samplearrayofanything));
+    fill2D(samplearrayofanything);
     //expect every number per array to be 1, but every last number to be a 3
-    printarray(fill2D(int0array2d(5,5))) ;
-    printarray(fill2D(int0array2d(6,8))) ;
-    printarray(fill2D(int0array2d(7,5))) ;
-    printarray(fill2D(int0array2d(10,10))) ;
+    printarray(samplearrayofanything);
     //2 dimensional array of 1s, but if row#=column#, return 3
 
   }
