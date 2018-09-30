@@ -40,7 +40,7 @@ public class ArrayDemo{
     System.out.println("}");
   }
 
-   
+
 //1. Calculate and return how many zeros are in the parameter
 //(a rectangular 2D array of integers)
     public static int[][] int0array2d(int n, int m){
@@ -122,7 +122,7 @@ public static int[][] fill2D(int[][] ary){
      return ary;
    }
 
-  public static void main(String[] args){
+public static void main(String[] args){
     int[] ary1d={1,2,3};
     printarray(ary1d);
 
