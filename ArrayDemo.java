@@ -1,7 +1,7 @@
 public class ArrayDemo{
 //0a. Make a function to print a 1D array of ints.
 //1 dimensional array of integers
-  public static void print1darray(int[] ary1d){
+  public static void printarray(int[] ary1d){
     System.out.print("{");
     for (int i=0;i<ary1d.length;i++)
     {
@@ -18,7 +18,7 @@ public class ArrayDemo{
   }
 
 //0b. Make a function to print a 2d array of ints.
-  public static void print2darray(int[][] ary2d){
+  public static void printarray(int[][] ary2d){
     System.out.println("{");
     for (int i=0;i<ary2d.length;i++)
     {
@@ -199,7 +199,7 @@ public static int[][] fill2D(int[][] ary){
 
   public static void main(String[] args){
     int[] ary1d={1,2,3};
-    print1darray(ary1d);
+    printarray(ary1d);
 
     int[][] ary2d=
     {
@@ -208,7 +208,7 @@ public static int[][] fill2D(int[][] ary){
       {2,24,25,26},
       {2,4,6,8}
     };
-    print2darray(ary2d);
+    printarray(ary2d);
 
     System.out.println(countZeros2D(4,5)) ; //20
     System.out.println(countZeros2D(5,5)) ; //25
