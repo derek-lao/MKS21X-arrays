@@ -174,7 +174,7 @@ public static int[][] arrayofzeroes(int n, int m){
   return zeroarray;
 }
 
-public static int[][] fill2D(int[][] ary){
+public static void fill2D(int[][] ary){
   for (int i=0;i<ary.length;i++)
   {
     for (int j=0;j<ary[i].length;j++)
@@ -189,7 +189,6 @@ public static int[][] fill2D(int[][] ary){
       }
     }
   }
-  return ary;
 }
 
   /* made array of all 1s, unless column number is equal to row number, then
