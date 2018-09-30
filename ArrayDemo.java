@@ -106,7 +106,7 @@ public static void fill2D(int[][] ary){
      {
        for (int j=0;j<ary[i].length;j++)
        {
-         if (i==j)
+         if (ary[i][j]<0)
          {
            ary[i][j]=3;
          }
@@ -150,6 +150,24 @@ public static void main(String[] args){
     printarray(samplearrayofanything);
     //2 dimensional array of 1s, but if row#=column#, return 3
 
+    int[][] arraywithnegative={
+      {-33,123,-41,129},
+      {324,-123,90,-3},
+      {1431,-23123,-523423,123},
+      {-5654,9,8,-19}
+    };
+
+    printarray(fill2Dcopy(arraywithnegative));
+    /*
+
+    expecting
+
+    {
+    {3,1,3,1},
+    {1,3,1,3},
+    {1,3,3,1},
+    {3,1,1,3}
+    } */
   }
 
 }
